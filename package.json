@@ -2,6 +2,7 @@
 	"name": "apache-ignite-log-pretty-printer",
 	"displayName": "Apache Ignite Log Pretty Printer",
 	"description": "Pretty prints apache ignite logs",
+	"publisher": "dany74q",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.36.0"

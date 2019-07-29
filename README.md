@@ -1,65 +1,65 @@
-# ignite-vscode-extension README
+# apache-ignite-log-pretty-printer
 
-This is the README for your extension "ignite-vscode-extension". After writing up a brief description, we recommend including the following sections.
+A pretty-printer for apache ignite logs:
 
-## Features
+Turns this:
+> `
+Failed to map task jobs to nodes (topology projection is empty): GridTaskSessionImpl [taskName=o.a.i.i.processors.service.GridServiceProxy$ServiceProxyCallable, dep=LocalDeployment [super=GridDeployment [ts=1564386484652, depMode=CONTINUOUS,clsLdrId=e0453bc3c61-f3250f02-8aaf-4cb4-b84a-16822eecca8f, userVer=0, loc=true, sampleClsName=java.lang.String, pendingUndeploy=false, undeployed=false, usage=0]], taskClsName=o.a.i.i.processors.service.GridServiceProxy$ServiceProxyCallable, sesId=3cb59f24c61-f3250f02-8aaf-4cb4-b84a-16822eecca8f, startTime=1564421128181, endTime=9223372036854775807, taskNodeId=f3250f02-8aaf-4cb4-b84a-16822eecca8f, closed=false, cpSpi=null, failSpi=null, loadSpi=null, usage=1, fullSup=false, internal=false, topPred=null, subjId=f3250f02-8aaf-4cb4-b84a-16822eecca8f, mapFut=IgniteFuture [orig=GridFutureAdapter [resFlag=0, res=null, startTime=1564421128181, endTime=0, ignoreInterrupts=false, state=INIT]]]
+`
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+To this:
+```
+Failed to map task jobs to nodes (topology projection is empty): GridTaskSessionImpl [
+    taskName=o.a.i.i.processors.service.GridServiceProxy$ServiceProxyCallable,
+    dep=LocalDeployment [
+        super=GridDeployment [
+            ts=1564386484652,
+            depMode=CONTINUOUS,
+            clsLdrId=e0453bc3c61-f3250f02-8aaf-4cb4-b84a-16822eecca8f,
+            userVer=0,
+            loc=true,
+            sampleClsName=java.lang.String,
+            pendingUndeploy=false,
+            undeployed=false,
+            usage=0
+        ]
+    ],
+    taskClsName=o.a.i.i.processors.service.GridServiceProxy$ServiceProxyCallable,
+    sesId=3cb59f24c61-f3250f02-8aaf-4cb4-b84a-16822eecca8f,
+    startTime=1564421128181,
+    endTime=9223372036854775807,
+    taskNodeId=f3250f02-8aaf-4cb4-b84a-16822eecca8f,
+    closed=false,
+    cpSpi=null,
+    failSpi=null,
+    loadSpi=null,
+    usage=1,
+    fullSup=false,
+    internal=false,
+    topPred=null,
+    subjId=f3250f02-8aaf-4cb4-b84a-16822eecca8f,
+    mapFut=IgniteFuture [
+        orig=GridFutureAdapter [
+            resFlag=0,
+            res=null,
+            startTime=1564421128181,
+            endTime=0,
+            ignoreInterrupts=false,
+            state=INIT
+        ]
+    ]
+]
+```
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open VSCode's command palette
+2. Choose 'Ignite Pretty Print'
+3. Profit
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
+## Releases
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release.
